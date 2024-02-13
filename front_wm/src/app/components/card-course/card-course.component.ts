@@ -7,10 +7,10 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class CardCourseComponent implements OnInit{
   @Input()
-  nombreCurso!: string
+  course_name!: string
 
   @Input()
-  nivel!: string
+  course_desc!: string
 
   ngOnInit(): void {
     console.log("INIT CURSOS")

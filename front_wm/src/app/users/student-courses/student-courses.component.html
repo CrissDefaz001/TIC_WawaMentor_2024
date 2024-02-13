@@ -11,10 +11,10 @@
            href="/">Ver mis cursos</a>
       </div>
     </div>
-    <div  *ngFor="let cur of listaCursos">
+    <div  *ngFor="let cur of listaCursos2">
       <app-card-course
-        [nombreCurso]="cur.nombre"
-        [nivel]="cur.nivel"></app-card-course>
+        [course_name]="cur.course_name"
+        [course_desc]="cur.course_desc"></app-card-course>
     </div>
   </div>
 </div>

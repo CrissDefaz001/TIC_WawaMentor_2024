@@ -10,7 +10,7 @@ import {observable} from "rxjs";
 export class StudentCoursesComponent implements OnInit {
 
   listaCursos: any[];
-  //listaCursos2 = observable<any>
+  listaCursos2: any[] = [];
 
   // arreglo de ejemplo
   constructor(
@@ -41,12 +41,15 @@ export class StudentCoursesComponent implements OnInit {
     ]
   }
 
-  // funcion que devuelve un observable (como un try-catch)
-  mensajeConsola(objeto:boolean){
-    console.log("Cursos obtneidos")
-    const observableCursos = this.__courseService.traerCursos()
-    observableCursos.subscribe({complete: console.info})
+  llenarData(){
+    this.__courseService.traerCursos().subscribe( data => {
+      this.listaCursos2 = data;
+      console.log(this.listaCursos2) // imprime los datos
+      }
+    )
   }
+
   ngOnInit(): void {
+    this.llenarData()
   }
 }

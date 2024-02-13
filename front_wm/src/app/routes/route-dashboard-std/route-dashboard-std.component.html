@@ -1,0 +1,43 @@
+<!--  navbar-->
+<div class="fixed-top">
+  <app-navbar-main xmlns="http://www.w3.org/1999/html"></app-navbar-main>
+  <app-navbar-secondary></app-navbar-secondary>
+</div>
+
+<div class="container">
+  <!--  migas de pan-->
+  <ol class="breadcrumb bg-transparent">
+    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
+    <li class="breadcrumb-item active">Dashboard</li>
+  </ol>
+  <h1 class="h2" style="color: #2196f3">Dashboard</h1>
+  <br>
+
+  <!--  Alertas -->
+  <div class="alert alert-info alert-dismissible fade show" role="alert">
+    Tienes tareas pendientes <strong>para hoy</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <br>
+
+
+  <div class="container">
+    <div class="row">
+      <!--  Cursos-->
+      <div class="col-lg-6">
+        <app-student-courses></app-student-courses>
+      </div>
+
+      <!--  Tareas -->
+      <div class="col-lg-6">
+        <app-student-tasks></app-student-tasks>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+

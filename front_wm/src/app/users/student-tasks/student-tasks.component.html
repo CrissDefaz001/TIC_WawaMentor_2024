@@ -1,0 +1,21 @@
+<div class="card">
+  <div class="card-header">
+    <div class="media align-items-top">
+      <div class="media-body">
+        <h4 class="card-title">Mis Tareas y exámenes</h4>
+        <br>
+        <p class="card-subtitle">Tareas pendientes</p>
+      </div>
+      <div class="media-right">
+        <a class="btn btn-sm btn-primary"
+           href="/">Ver todas mis tareas</a>
+      </div>
+    </div>
+    <div  *ngFor="let t of listaTareas">
+      <app-card-task
+        [nombreTarea]="t.nombreTarea"
+        [nombreCurso]="t.nombreCurso"
+        [calificacion]="t.grade"></app-card-task>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {CoursesService} from "../../services/http/courses.service";
-import {observable} from "rxjs";
 
 @Component({
   selector: 'app-student-courses',
@@ -9,47 +8,52 @@ import {observable} from "rxjs";
 })
 export class StudentCoursesComponent implements OnInit {
 
-  listaCursos: any[];
-  listaCursos2: any[] = [];
+  //listaCursos2: any[] = [];
+  nivel: any;
+  listaCursos = [
+    {
+      id: 1,
+      course_name: 'Violin',
+      course_desc: 'Inicial',
+      icon: '../../../assets/images/courses/violin.png'
+    },
+/*    {
+      id: 2,
+      course_name: 'Piano',
+      course_desc: 'Intermedio',
+      icon: '../../../assets/images/courses/piano.png'
+    },*/
+    {
+      id: 3,
+      course_name: 'Guitarra',
+      course_desc: 'Avanzado',
+      icon: '../../../assets/images/courses/guitar.png'
+    },/*    {
+      id: 4,
+      course_name: 'Violonchelo',
+      course_desc: 'Inicial',
+      icon: '../../../assets/images/courses/violonchelo.png'
+    },*/
+
+  ]
+
+
 
   // arreglo de ejemplo
   constructor(
     private readonly __courseService: CoursesService
   ) {
-    // Arreglo quemado de cursos
-    this.listaCursos = [
-      {
-        id: 1,
-        nombre: 'Violin',
-        nivel: 'Inicial'
-      },
-      {
-        id: 2,
-        nombre: 'Piano',
-        nivel: 'Intermedio'
-      },
-      {
-        id: 3,
-        nombre: 'Guitarra',
-        nivel: 'Avanzado'
-      },
-      {
-        id: 4,
-        nombre: 'Violonchelo',
-        nivel: 'Inicial'
-      },
-    ]
   }
 
-  llenarData(){
+/*  llenarData(){
     this.__courseService.traerCursos().subscribe( data => {
       this.listaCursos2 = data;
       console.log(this.listaCursos2) // imprime los datos
       }
     )
-  }
+  }*/
 
   ngOnInit(): void {
-    this.llenarData()
+   // this.llenarData()
   }
 }

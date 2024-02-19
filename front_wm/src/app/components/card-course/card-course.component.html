@@ -1,15 +1,9 @@
-<ul class="list-group list-group-fit mb-0" style="z-index: initial;">
-  <li class="list-group-item" style="z-index: initial;">
-    <div class="d-flex align-items-center">
-      <a href="/" class="avatar avatar-4by3 avatar-sm mr-3">
-        <img src="../../../assets/images/courses/violin.jpg" alt="course violin" class="avatar-img rounded" width="150">
-      </a>
-      <div class="flex">
-        <div class="d-flex align-items-center">
-          <a href="/" class="text-body"><strong>{{ course_name }}</strong></a>
-        </div>
-        <span class="badge badge-primary">{{ course_desc }}</span>
-      </div>
-    </div>
-  </li>
-</ul>
+<div class="card h-100">
+  <img [src]="icon" class="card-img-top" alt="course" width="20" height="150">
+  <div class="card-body">
+    <h5 class="card-title">{{ course_name }}</h5>
+    <p class="card-text">Nivel: {{ course_desc }}</p>
+  </div>
+</div>
+
+

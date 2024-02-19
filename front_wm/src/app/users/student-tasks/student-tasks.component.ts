@@ -13,17 +13,20 @@ export class StudentTasksComponent implements OnInit{
   constructor() {
     this.listaTareas = [
       {
-        nombreTarea: 'Posicion de manos',
+        nombreTarea: 'Lectura recomendada',
+        descrip_tarea: 'Revisar la literatura solicitada',
         nombreCurso: 'Violin',
         grade: 9.5
       },
       {
-        nombreTarea: 'Partitura Cielito Lindo & Routing',
+        nombreTarea: 'Partitura Cielito Lindo',
+        descrip_tarea: 'Buscar los acorde de la canción tradicional mexicana ',
         nombreCurso: 'Guitarra',
-        grade: 8
+        grade: '-'
       },
       {
-        nombreTarea: 'Repaso de Tablatura',
+        nombreTarea: 'Completar el crucigrama',
+        descrip_tarea: 'Complete la siguiente actividad hasta obtener el mejor tiempo posible',
         nombreCurso: 'Piano',
         grade: 6.5
       },

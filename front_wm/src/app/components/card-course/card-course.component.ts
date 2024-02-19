@@ -6,11 +6,15 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrl: './card-course.component.css'
 })
 export class CardCourseComponent implements OnInit{
+
   @Input()
   course_name!: string
 
   @Input()
   course_desc!: string
+
+  @Input()
+  icon!: string
 
   ngOnInit(): void {
     console.log("INIT CURSOS")

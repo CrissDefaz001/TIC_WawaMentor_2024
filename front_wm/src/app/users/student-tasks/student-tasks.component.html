@@ -1,21 +1,26 @@
-<div class="card">
-  <div class="card-header">
-    <div class="media align-items-top">
-      <div class="media-body">
-        <h4 class="card-title">Mis Tareas y exámenes</h4>
-        <br>
-        <p class="card-subtitle">Tareas pendientes</p>
-      </div>
-      <div class="media-right">
-        <a class="btn btn-sm btn-primary"
-           href="/">Ver todas mis tareas</a>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-1 g-4 bg-body-secondary">
+    <div class="col">
+      <div class="row">
+        <div class="col-lg-8"><h4 class="card-title">Mis actividades</h4></div>
+        <div class="col-lg-4 d-flex justify-content-end">
+          <a class="btn btn-sm btn-outline-primary"
+             href="/">Todas mis actividades</a>
+        </div>
       </div>
     </div>
-    <div  *ngFor="let t of listaTareas">
-      <app-card-task
-        [nombreTarea]="t.nombreTarea"
-        [nombreCurso]="t.nombreCurso"
-        [calificacion]="t.grade"></app-card-task>
+    <div class="row">
+      <h6 class="text-secondary">Actividades recientes</h6>
+      <br>
+    </div>
+    <div class="row row-cols-1 row-cols-md-1">
+      <div *ngFor="let cur of listaTareas">
+        <app-card-task
+          [nombreTarea]="cur.nombreTarea"
+          [nombreCurso]="cur.nombreCurso"
+          [descrip_tarea]="cur.descrip_tarea"
+          [calificacion]="cur.grade"></app-card-task>
+      </div>
     </div>
   </div>
 </div>

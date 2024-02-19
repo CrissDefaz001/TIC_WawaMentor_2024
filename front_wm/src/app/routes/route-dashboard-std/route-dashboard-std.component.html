@@ -1,24 +1,24 @@
 <!--  navbar-->
-<div class="fixed-top">
-  <app-navbar-main xmlns="http://www.w3.org/1999/html"></app-navbar-main>
-  <app-navbar-secondary></app-navbar-secondary>
-</div>
-
-<div class="container">
+<div class="container-fluid">
   <!--  migas de pan-->
-  <ol class="breadcrumb bg-transparent">
-    <li class="breadcrumb-item"><a href="/">Inicio</a></li>
-    <li class="breadcrumb-item active">Dashboard</li>
-  </ol>
-  <h1 class="h2" style="color: #2196f3">Dashboard</h1>
+  <br>
+  <div class="row">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item" ><a href="/student/dashboard" class="text-black">Estudiante</a></li>
+        <li class="breadcrumb-item active"><a href="/student/dashboard" class="text-black">Dashboard</a></li>
+      </ol>
+    </nav>
+  </div>
+
+
+  <h1 class="h2" style="color: #114491">Dashboard</h1>
   <br>
 
   <!--  Alertas -->
-  <div class="alert alert-info alert-dismissible fade show" role="alert">
-    Tienes tareas pendientes <strong>para hoy</strong>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
+  <div class="alert alert-success alert-dismissible fade show text-black" role="alert">
+    Tienes activades pendientes <strong>para hoy.</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
   <br>
 

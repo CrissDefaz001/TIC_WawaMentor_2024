@@ -1,20 +1,29 @@
-<div class="card">
-  <div class="card-header">
-    <div class="media align-items-top">
-      <div class="media-body">
-        <h4 class="card-title">Mis Cursos</h4>
-        <br>
-        <p class="card-subtitle">Cursos recientes</p>
-      </div>
-      <div class="media-right">
-        <a class="btn btn-sm btn-primary"
-           href="/">Ver mis cursos</a>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-1 g-4 bg-body-secondary">
+    <div class="col">
+      <div class="row">
+        <div class="col-lg-9"><h4 class="card-title">Mis Cursos</h4></div>
+        <div class="col-lg-3 d-flex justify-content-end">
+          <a class="btn btn-sm btn-outline-primary"
+             href="/">Todos mis cursos</a>
+        </div>
       </div>
     </div>
-    <div  *ngFor="let cur of listaCursos2">
-      <app-card-course
-        [course_name]="cur.course_name"
-        [course_desc]="cur.course_desc"></app-card-course>
+    <div class="row">
+      <h6 class="text-secondary">Cursos recientes</h6>
+      <br>
+    </div>
+    <div class="row row-cols-1 row-cols-md-2">
+      <div *ngFor="let cur of listaCursos">
+        <app-card-course
+          [course_name]="cur.course_name"
+          [icon]="cur.icon"
+          [course_desc]="cur.course_desc"></app-card-course>
+      </div>
     </div>
   </div>
 </div>
+
+
+
+

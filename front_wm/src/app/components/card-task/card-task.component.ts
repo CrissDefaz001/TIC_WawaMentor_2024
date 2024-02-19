@@ -13,6 +13,9 @@ export class CardTaskComponent implements OnInit{
   nombreCurso!: string
 
   @Input()
+  descrip_tarea!: string
+
+  @Input()
   calificacion!: number
 
   ngOnInit(): void {

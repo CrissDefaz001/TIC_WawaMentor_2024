@@ -1,0 +1,39 @@
+<div  (click)=irACurso() class="card mb-3">
+  <div class="card-body">
+    <div class="row">
+      <div class="col col-lg-2">
+        <img [src]="icon" class="" alt="course" [width]="90">
+      </div>
+      <div class="col col-lg-10">
+        <h6 class="card-title fs-5">
+          {{ course_name }} <span class="badge text-bg-primary">{{ level }}</span>
+        </h6>
+        <h6 class="card-subtitle text-secondary">
+          {{ desc }}
+        </h6>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+<div  (click)=irACurso() class="card main-color-wm text-light mb-3" style="max-width: 18rem">
+  <div class="card-body">
+    <div class="row">
+      <div class="col col-lg-7">
+        <h5 class="card-title fs-4">
+          {{ course_name }}
+        </h5>
+      </div>
+      <div class="col col-lg-5">
+        <img [src]="icon" class="" alt="course" [width]="70">
+      </div>
+    </div>
+  </div>
+  <div class="card-footer bg-transparent border-success">
+    {{ level }}
+  </div>
+</div>
+-->

@@ -1,0 +1,149 @@
+<!-- Título de curso -->
+
+<!-- Breadcrumb -->
+<div class="mt-2 row main-tex-wm">
+  <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="#">Maestro</a></li>
+      <li class="breadcrumb-item"><a routerLink="#">Cursos</a></li>
+      <li class="breadcrumb-item active" aria-current="page"><strong>Violin</strong></li>
+    </ol>
+  </nav>
+</div>
+
+<div class="row main-tex-wm">
+  <h3><br>{{ nombreCurso }}</h3>
+</div>
+
+<!-- Cuerpo del curso -->
+<div class="row">
+  <!--  Columna izquierda-->
+  <div class="col col-lg-8">
+
+    <!--  Imagen introductoria y descripcion de curso  -->
+    <div class="card mb-3">
+      <img src="assets/bg/fondo.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Curso de Violín</h5>
+        <p class="card-text">En este curso, aprenderás técnicas básicas del violín, postura, arco y digitación, además
+          de lectura de partituras.</p>
+      </div>
+    </div>
+
+    <!-- Link de clase -->
+    <div class="alert alert-primary" role="alert">
+      <strong>Link clase: </strong>
+      <a href="https://teams.live.com/meet/9348623407092?p=gHsudWrb4GriqiiA">
+        https://teams.live.com/meet/9348623407092?p=gHsudWrb4GriqiiA</a>
+    </div>
+
+    <!-- Contenido -->
+    <div class="row">
+      <div class="row main-tex-wm">
+        <h5><br>Contenido</h5>
+      </div>
+      <div ngbAccordion [closeOthers]="true">
+        @for (item of items; track item) {
+          <div ngbAccordionItem [collapsed]="item !== 'First'">
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton>{{ item }}</button>
+            </h2>
+            <div ngbAccordionCollapse>
+              <div ngbAccordionBody>
+                <ng-template>
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
+                  moon
+                  officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
+                  Brunch 3
+                  wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch
+                  et.
+                  Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad
+                  vegan
+                  excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
+                  nesciunt
+                  you probably haven't heard of them accusamus labore sustainable VHS.
+                </ng-template>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+
+
+  <!--  Columna derecha -->
+  <div class="col col-lg-4">
+    <!-- Botón de regreso a cursos -->
+    <div class="row">
+      <div class="d-grid gap-2 col-12">
+        <button class="btn btn-outline-primary"><i class="fas fa-arrow-left me-3"></i>Volver a cursos
+        </button>
+        <button class="btn btn-danger"><i class="fas fa-edit me-3"></i>Editar Curso</button>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <!-- Detalles de maestro -->
+      <div class="card border-dark mb-3">
+        <div class="card-header">
+          <div class="row">
+            <div class="col col-lg-2 col-sm-2">
+              <img src="assets/users/teacher.png" alt="maestro" [width]="60" class="rounded-circle">
+            </div>
+            <div class="col col-lg-8 col-sm-8">
+              <p class="card-title main-tex-wm fs-5">Marcos Atupaña</p>
+              <small class="card-text text-secondary">Maestro de Piano</small>
+            </div>
+            <div class="col col-lg-2 col-sm-2">
+              <button class="btn btn-outline-dark"><i class="fas fa-edit"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="card-body text-success">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer viverra rhoncus odio eget condimentum. Ut
+          imperdiet malesuada rutrum. Aenean quis turpis quis mi vestibulum tempus. Ut aliquet leo non neque tincidunt
+          egestas. Aliquam vel lobortis libero. Nulla rhoncus posuere urna, tempor sagittis enim maximus ac.
+        </div>
+        <div class="card-footer bg-transparent border-success">
+          <button href="#" class="btn btn-light"><i class="fab fa-facebook-square"></i></button>
+          <button href="#" class="btn btn-light"><i class="fab fa-instagram"></i></button>
+          <button href="#" class="btn btn-light"><i class="fab fa-whatsapp"></i></button>
+        </div>
+      </div>
+
+      <!-- Detalles de curso -->
+      <div class="card border-dark">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <i class="far fa-calendar-alt me-3 fs-6"></i>
+            <span class="fs-6"><strong>Horario</strong></span>
+          </li>
+          <li class="list-group-item">
+            <i class="fas fa-clock me-3"></i>
+            <strong class="text-muted">18:00 - 19:00</strong> - <strong class="text-muted">Lunes</strong>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!--  Video introductorio  -->
+    <div class="row mt-3">
+      <div class="card border-0">
+        <iframe width="420" height="315"
+                src="https://www.youtube.com/embed/nuE_6buCiMc?si=e7ND587R0rnjD6z-">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Botón de asistencia -->
+    <div class="row justify-content-md-center mt-3">
+      <button class="btn btn-outline-primary" routerLink="/teacher/course/attendance">
+        <i class="fas fa-list me-3"></i>Registrar Asistencia</button>
+    </div>
+
+    <div class="row">
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,63 @@
+<div class="nav navbar">
+  <img src="assets/bg/fondo.jpg" alt="banner" width="100%" height="200">
+</div>
+
+<!-- Panel principal -->
+<div class="container">
+
+  <!-- Breadcrumb -->
+  <div class="mt-4 row main-tex-wm">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Estudiante</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="row">
+    <!-- Panel de cursos -->
+    <div class="col col-lg-6">
+      <div class="row">
+        <div class="mt-4 row main-tex-wm">
+          <h6>CURSOS</h6>
+        </div>
+        <hr>
+        <!--  Tarjetas de cursos -->
+        <div class="row bg-light">
+          <div class="mt-4 row main-tex-wm">
+            <h6>CURSOS ESTUDIANTE</h6>
+          </div>
+          <div *ngFor="let cur of listaCursos">
+            <app-card-course
+              [course_name]="cur.course_name"
+              [icon]="cur.icon"
+              [level]="cur.level"
+              [desc]="cur.desc"></app-card-course>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel de tareas -->
+    <div class="col col-lg-6">
+      <div class="row">
+        <div class="mt-4 row main-tex-wm">
+          <h6>TAREAS PENDIENTES</h6>
+        </div>
+        <hr>
+        <!--  Tarjetas de tareas -->
+          <div class="row mt-5 pt-2">
+            <div *ngFor="let t of listaTareas">
+              <app-card-task
+                [descrip_tarea]="t.descrip_tarea"
+                [nombreCurso]="t.nombreCurso"
+                [fecha]="t.fecha"
+              ></app-card-task>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {RouteLoginComponent} from "./routes/route-login/route-login.component";
-import {RouteDashboardStdComponent} from "./routes/route-dashboard-std/route-dashboard-std.component";
+import {S_dashboardComponent} from "./routes/student/s_dashboard/s_dashboard.component";
 import {RouteCourseStdComponent} from "./routes/route-course-std/route-course-std.component";
-import {RouteHomeComponent} from "./routes/route-home/route-home.component";
 import {RouteActivityComponent} from "./routes/route-activity/route-activity.component";
 import {RouteNotFoundComponent} from "./routes/route-not-found/route-not-found.component";
 import {RouteFormComponent} from "./routes/route-form/route-form.component";
-import {ModalComponent} from "./components/modal/modal.component";
-import {RouteTeacherProfileComponent} from "./routes/route-teacher-profile/route-teacher-profile.component";
-import {RouteMainComponent} from "./routes/route-main/route-main.component";
-import {RouteStudentComponent} from "./routes/route-student/route-student.component";
-import {RouteTeacherComponent} from "./routes/route-teacher/route-teacher.component";
+import {T_profileComponent} from "./routes/teacher/t_profile/t_profile.component";
+import {RouteStudentComponent} from "./routes/student/route-student/route-student.component";
+import {RouteTeacherComponent} from "./routes/teacher/route-teacher/route-teacher.component";
 
 const routes: Routes = [
   {
@@ -19,15 +16,11 @@ const routes: Routes = [
     path: 'login'
   },
   {
-    component: RouteMainComponent,
-    path: 'inicio'
-  },
-  {
     component: RouteStudentComponent,
     path: 'student',
     children: [
       {
-        component: RouteDashboardStdComponent,
+        component: S_dashboardComponent,
         path: 'dashboard'
       },
       {
@@ -42,38 +35,26 @@ const routes: Routes = [
         component: RouteActivityComponent,
         path: 'activity'
       },
-/*      {
-        path:'',
-        redirectTo: "/student/dashboard",
-      }*/
     ]
-  },
- {
-    component: RouteHomeComponent,
-    path:''
   },
   {
     component: RouteTeacherComponent,
     path: 'maestro',
     children: [
       {
-        component: RouteTeacherProfileComponent,
+        component: T_profileComponent,
         path: 'perfil'
       },
+      {
+        component: RouteFormComponent,
+        path: 'register'
+      },
     ]
-  },
-  {
-    component: RouteFormComponent,
-    path: 'register'
   },
 
   {
     component: RouteNotFoundComponent,
     path: '**'
-  },
-  {
-    component: ModalComponent,
-    path: 'modal'
   },
 ];
 

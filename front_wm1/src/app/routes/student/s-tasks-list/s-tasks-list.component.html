@@ -1,0 +1,23 @@
+<div class="row main-tex-wm">
+  <h4><br>Mis Tareas</h4>
+</div>
+<div class="row">
+  <div class="col col-lg-6">
+    <!-- Cuadro de búsqueda  -->
+    <app-searchbox [placeholderContent]="placeholder"/>
+  </div>
+</div>
+<div class="row">
+  <!--  Tarjetas de cursos -->
+  <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div *ngFor="let t of listaTareas">
+      <app-card-task
+        [nombreTarea]="t.nombreTarea"
+        [nombreCurso]="t.nombreCurso"
+      ></app-card-task>
+    </div>
+
+  </div>
+
+  <p>s-tasks works!</p>
+</div>

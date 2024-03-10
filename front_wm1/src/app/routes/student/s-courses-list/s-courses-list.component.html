@@ -1,0 +1,24 @@
+<div class="mt-4 row main-tex-wm">
+  <h4>Mis cursos</h4>
+</div>
+<div class="row">
+  <div class="col col-lg-3">
+    <!-- Cuadro de búsqueda  -->
+    <app-searchbox [placeholderContent]="placeholder"/>
+  </div>
+</div>
+<div class="row">
+  <!--  Tarjetas de cursos -->
+  <div class="row row-cols-1 row-cols-lg-4 g-4">
+    <div *ngFor="let cur of listaCursos">
+      <app-card-course
+        [id_course]="cur.id_course"
+        [course_name]="cur.course_name"
+        [icon]="cur.icon"
+        [level]="cur.level"></app-card-course>
+    </div>
+  </div>
+  <p>s-courses works!</p>
+</div>
+<!--<router-outlet/>-->
+

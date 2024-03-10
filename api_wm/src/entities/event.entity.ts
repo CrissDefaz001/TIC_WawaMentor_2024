@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity({ name: 'event_wm' })
 export class EventEntity {
@@ -26,7 +26,7 @@ export class EventEntity {
   @Column({ type: 'datetime', nullable: true })
   event_submit_date: Date;
 
-  @Column({ type: 'datetime' })
+  @CreateDateColumn({ type: 'datetime' })
   event_deadline: Date;
 
   @Column()

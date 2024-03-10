@@ -1,0 +1,11 @@
+<!-- Sidebar -->
+<div *ngFor="let x of datosSidebar">
+  <div ngbNavItem>
+    <a ngbNavLink routerLink="{{ x['ruta'] }}" class="text-light" routerLinkActive="activesidebar">
+      <i class="{{ x['icono'] }} fa-fw me-3 fs-6"></i>
+      <span class="fs-6">{{ x['nombre'] }}</span>
+    </a>
+  </div>
+</div>
+
+

@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg sticky-top main-color-wm">
+  <div class="container">
+    <div class="flex-fill">
+      <!-- Sidebar -->
+      <div class="navbar-dark navbar-toggler-icon me-3" (click)=open()></div>
+
+      <!-- Marca -->
+      <a class="navbar-brand text-light" routerLink="dashboard" routerLinkActive>
+        <img src="assets/logos/wayra_wawa.png" class="me-2" [width]="60" alt="">Wawa<stronG>Mentor</stronG>
+      </a>
+    </div>
+
+    <!-- Boton de usuario -->
+    <div class="d-flex">
+      <div ngbDropdown>
+        <button type="button" class="btn btn-outline-light" id="dropdownConfig" ngbDropdownToggle>
+          <!--          <span>Bienvenida <strong> Helena  </strong></span>-->
+          <img src="{{ urlFotoUsuario }}" alt="user" class="rounded-circle" [width]="40">
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownConfig" class="dropdown-menu-sm-end dropdown-menu-lg-start">
+          <button ngbDropdownItem>
+            <span>Usuario Actual: <strong> {{ usuarioActual }}</strong></span>
+          </button>
+          <div class="dropdown-divider"></div>
+          <button ngbDropdownItem>
+            <i class="fas fa-edit fa-fw me-3"></i><span>Editar Perfil</span>
+          </button>
+          <button ngbDropdownItem>
+            <i class="fas fa-wrench fa-fw me-3"></i><span>Editar Cuenta</span>
+          </button>
+          <div class="dropdown-divider"></div>
+          <button ngbDropdownItem>
+            <i class="fas fa-sign-out-alt fa-fw me-3"></i><span>Cerrar Sesión</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+

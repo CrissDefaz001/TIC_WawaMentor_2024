@@ -1,0 +1,77 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*Colores oficiales de la plataforma*/
+.main-color-wm {
+  background-color: #114491;
+}
+.sec-color-wm {
+  background-color: #A0A0A0;
+}
+.main-tex-wm {
+  color: #114491;
+}
+
+/* Cambia el cursor para las tarjetas */
+.card {
+  cursor: pointer;
+}
+
+/* Ajuste de color de tabs de sidebar activos */
+/*.activesidebar {
+  color: white;
+  background-color: #A0A0A0;
+}*/
+
+.list-group .list-group-item {
+  background-color: transparent;
+}
+
+.list-group .active{
+  background-color: #114491;
+}
+
+/* Ajuste de colores de pestañas */
+.nav-tabs .nav-item .nav-link.active {
+  color: white;
+  background-color: #114491;
+}
+
+.nav-tabs .nav-item .nav-link {
+  background-color: white;
+  color: #114491;
+}
+
+.activetab {
+  color: white;
+  background-color: #114491;
+}
+
+.offcanvas{
+  background-color: #A0A0A0;
+  /*width: 15% !important;*/
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+    background: url(assets/bg/fondo.jpg);
+    background-size: cover;
+}
+
+.img-cover{
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Botones primarios */
+.btn-outline-primary {
+  color: #114491;
+  background-color: white;
+  border-color: #114491; /*set the color you want here*/
+}
+.btn-outline-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #114491;
+  border-color: #114491; /*set the color you want here*/
+}
+
